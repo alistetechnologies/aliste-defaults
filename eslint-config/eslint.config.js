@@ -2,6 +2,7 @@
 // 1. Import required configs and packages (must use ES module syntax: import/export)
 import js from "@eslint/js";
 import prettierConfig from "eslint-config-prettier";
+import globals from "globals";
 
 export default [
   // 2. Add the recommended settings from @eslint/js (replaces "eslint:recommended")
@@ -15,9 +16,9 @@ export default [
       sourceType: "module",
       // Replaces the old "env" globals like browser:true, node:true
       globals: {
-        browser: true,
-        Node: true,
-        es2021: true
+        ...globals.browser,
+        ...globals.node,
+        ...globals.es2021,
         // Add other globals if needed (e.g., specific framework globals)
       }
     },
