@@ -16,7 +16,8 @@ export default [
       // Replaces the old "env" globals like browser:true, node:true
       globals: {
         browser: true,
-        node: true,
+        Node: true,
+        es2021: true
         // Add other globals if needed (e.g., specific framework globals)
       }
     },
